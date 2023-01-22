@@ -6,8 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class RickAndMortyService {
 
-  httpOptions: any
-  api_url = "https://rickandmortyapi.com/api"
+  httpOptions: any;
+  api_url: string = "https://rickandmortyapi.com/api";
 
   constructor(private http: HttpClient) { 
     this.httpOptions = {
@@ -27,4 +27,30 @@ export class RickAndMortyService {
       })
     })
   }
+
+  getAllLocations(){
+    return new Promise(local => {
+      this.http.get(this.api_url+'/location',this.httpOptions).subscribe(res => {
+        console.log(res);
+        local(res);
+      }, err=> {
+        console.log(err)
+      })
+    })
+
+  }
+
+  getAllEpisodes(){
+    return new Promise(local => {
+      this.http.get(this.api_url+'/episode',this.httpOptions).subscribe(res => {
+        console.log(res);
+        local(res);
+      }, err=> {
+        console.log(err)
+      })
+    })
+
+  }
 }
+
+
