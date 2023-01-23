@@ -31,6 +31,4 @@ export class AllLocationsComponent implements OnInit {
     });
     return await modal.present();
    }
-
-
 }

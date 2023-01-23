@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-label>DETALLE DEL LA LOCACION</ion-label>
+    <ion-label>Información de los lugares</ion-label>
     <ion-buttons slot="end">
       <ion-button (click)="close()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -17,10 +17,15 @@
       </ion-col> -->
     </ion-row>
       <ion-col>
-        <h3><b>Nombre: </b> {{ location.name }}</h3>
         <h3><b>ID: </b> {{ location.id}}</h3>
-        <h3><b>Ubicacion actual: </b> {{ location.dimension }}</h3>
-        <h3><b>Visto por ultima vez: </b> {{ location.residents}}</h3>
+        <h3><b>Nombre: </b> {{ location.name }}</h3>
+        <h3><b>Dimennción: </b> {{ location.dimension }}</h3>
+        <h3><b>Creado en la base de datos: </b> {{ location.created}}</h3>        
+        <h3><b>Dimension: </b> {{ location.dimension }}</h3>
+        <h3><b>Tipo: </b> {{ location.type }}</h3>
+        <h3><b>URL: </b> {{ location.url }}</h3>
+
+        
       </ion-col>
     <ion-row>
 

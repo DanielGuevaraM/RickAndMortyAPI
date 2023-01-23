@@ -13,4 +13,8 @@
       </ion-label>
     </ion-item>
   </ion-list>
-</ion-content>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content> 
+

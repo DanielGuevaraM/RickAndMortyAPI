@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { RickAndMortyService } from '../../services/rick-and-morty.service';
 import { CharacterDetailComponent } from '../character-detail/character-detail.component';
+
 @Component({
   selector: 'app-all-characters',
   templateUrl: './all-characters.component.html',

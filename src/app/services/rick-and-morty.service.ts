@@ -39,18 +39,6 @@ export class RickAndMortyService {
     })
 
   }
-
-  getAllEpisodes(){
-    return new Promise(local => {
-      this.http.get(this.api_url+'/episode',this.httpOptions).subscribe(res => {
-        console.log(res);
-        local(res);
-      }, err=> {
-        console.log(err)
-      })
-    })
-
-  }
 }
 
 
